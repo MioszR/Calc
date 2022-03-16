@@ -2,6 +2,19 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 num = 0
 
+def start(num):
+    choose = input("Podaj działane, posługując się odpowiednią liczbą: 1 Dodawanie, 2 Odejmowanie, 3 Mnozenie, 4 Dzielenie :")
+    if choose == "1":
+        count = addition(num)
+    elif choose == "2":
+        count = substraction(num)
+    elif choose == "3":
+        count = multiplication(num)
+    elif choose == "4":
+        count = division(num)
+    else:
+        logging.warning("Nie podałeś cyfry 1-4, lub podałeś literę!")
+
 def addition(num):
     how_many = int(input("Ile  liczby chcesz dodać: "))
     numbers = []
