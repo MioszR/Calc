@@ -1,4 +1,5 @@
 import logging
+import sys
 logging.basicConfig(level=logging.DEBUG)
 num = 0
 
@@ -12,6 +13,8 @@ def start(num):
         count = multiplication(num)
     elif choose == "4":
         count = division(num)
+    elif choose == "ex" or "exit" or "Exit":
+        sys.exit(0)
     else:
         logging.warning("Nie podałeś cyfry 1-4, lub podałeś literę!")
 
