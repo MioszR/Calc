@@ -25,6 +25,7 @@ def addition(num):
         add = sum(numbers)
     logging.warning(f"Dodaję {numbers}")
     logging.info(f"Wynik to {'%.2f' % add}")
+    start(num)
     return add
 
 def substraction(num):
@@ -40,6 +41,7 @@ def substraction(num):
 
     logging.warning("Odejmuje %s" % numbers)
     logging.info(f"Wynik ostateczny to {'%.2f' % subs}" )
+    start(num)
     return subs
 
 def multiplication(num):
@@ -53,6 +55,7 @@ def multiplication(num):
             mul = mul * n
     logging.warning(f"Mnoze {numbers}")
     logging.info(f"Wynik to {'%.2f' % mul}")
+    start(num)
     return mul
 
 def division(num):
@@ -69,4 +72,8 @@ def division(num):
 
     logging.warning("Dzięlę %s" % numbers)
     logging.info(f"Wynik ostateczny to {'%.2f' % divi}")
+    start(num)
     return divi
+
+if __name__ == "__main__":
+    start(num)
